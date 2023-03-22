@@ -16,4 +16,4 @@ void addAtEnd(Node** head, Data v);
 
 void display(Node *head);
 
-
+void MakeTimp(Node **head);

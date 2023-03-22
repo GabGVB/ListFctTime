@@ -44,4 +44,13 @@ void modification (Node **head,int k)
         aux->val=10;
 
 }
+void MakeTimp (Node **head)
+{
+ Node *aux=*head;
+ while (aux!=NULL&&aux->next!=NULL)
+ {
+     aux->next->val+=aux->val;
+     aux=aux->next;
+ }
+}
 
