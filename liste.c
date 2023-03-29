@@ -44,13 +44,33 @@ void modification (Node **head,int k)
         aux->val=10;
 
 }
-void MakeTimp (Node **head)
+
+void addFunctionAt (Node **head,int k,int t)
 {
- Node *aux=*head;
- while (aux!=NULL&&aux->next!=NULL)
- {
-     aux->next->val+=aux->val;
-     aux=aux->next;
- }
+    Node *aux =*head;
+    int i=1;
+    while (i<k-1)
+    {
+        aux->val+=t;
+        aux=aux->next;
+        i++;
+    }
+    aux->val+=t;
+    Node *NewNode;
+    NewNode=(Node*)malloc(sizeof(Node));
+    NewNode->next=aux->next;
+    NewNode->val=t;
+    aux->next=NewNode;
+    NewNode->val+=NewNode->next->val;
+}
+
+void AddWithTime (Node **head,int k)
+{
+    Node *aux=*head;
+    while (aux!=NULL)
+    {
+        aux->val+=k;
+        aux=aux->next;
+    }
 }
 

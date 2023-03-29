@@ -1,4 +1,5 @@
 #include "liste.h"
+/*
 int main()
 {
     Node *head;
@@ -11,4 +12,23 @@ int main()
     modification(&head,3);
     display(head);
     return 0;
+}
+*/
+
+
+int main()
+{
+    Node *f;
+    f=NULL;
+    int t,i;
+
+    for (i=0; i<5; i++)
+    {
+        scanf("%d",&t);
+        AddWithTime(&f,t);
+        addAtEnd(&f,t);
+    }
+    display (f);
+    addFunctionAt(&f,3,5);
+    display(f);
 }

@@ -16,4 +16,8 @@ void addAtEnd(Node** head, Data v);
 
 void display(Node *head);
 
-void MakeTimp(Node **head);
+void modification (Node **head,int k);
+
+void addFunctionAt (Node **head,int k,int t);
+
+void AddWithTime (Node **head,int k);
